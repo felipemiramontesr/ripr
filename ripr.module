@@ -1,0 +1,13 @@
+/**
+ * @file
+ * A Module that allows you to restrict textlist field items per role
+ 
+
+<?php
+function ripr_help($path, $arg) {
+	  switch ($path) {
+  		  case "admin/help#ripr":
+     		 return '' . t("Allows you to restrict textlist field items per role.") . '';
+     		 break;
+  }
+}
