@@ -1,0 +1,5 @@
+name = ripr
+description = restrict textlist field items per role
+package = custom
+core = 7.x
+version = "1.0" 
