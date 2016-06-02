@@ -1,13 +1,29 @@
-/**
- * @file
- * A Module that allows you to restrict textlist field items per role
- 
-
 <?php
+
 function ripr_help($path, $arg) {
+
 	  switch ($path) {
+
   		  case "admin/help#ripr":
+
      		 return '' . t("Allows you to restrict textlist field items per role.") . '';
+
      		 break;
-  }
-}
+
+                     }
+
+function ripr_field_widget_form_alter(&$element, &$form_state, $context) {
+
+  if ($context['field']['field_name'] == 'NOMBRE MAQUINA DEL CAMPO') {
+
+  	global $user;
+    
+    if (in_array('ROL', $user->roles)) {
+
+       	unset($element['#options']['OMISIÓN 1'], $element['#options']['OMISIÓN 2']);
+
+   						                      }
+
+                                                                    }
+
+                                                                         }
